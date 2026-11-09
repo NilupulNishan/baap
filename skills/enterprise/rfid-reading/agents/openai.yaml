@@ -1,0 +1,3 @@
+interface:
+  display_name: "RFID Reading"
+  short_description: "Read RFID tags with DataWedge or a reader SDK"

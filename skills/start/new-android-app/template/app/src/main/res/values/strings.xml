@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">__APP_TITLE__</string>
+
+    <string name="page_all">All</string>
+    <string name="page_starred">Starred</string>
+    <string name="page_settings">Settings</string>
+
+    <string name="untitled">Untitled</string>
+    <string name="add_item">Add item</string>
+    <string name="back">Back</string>
+    <string name="star">Star</string>
+    <string name="unstar">Remove star</string>
+    <string name="delete">Delete</string>
+    <string name="deleted">Item deleted</string>
+    <string name="undo">Undo</string>
+    <string name="title_label">Title</string>
+
+    <string name="empty_all_title">Nothing here yet</string>
+    <string name="empty_all_body">Items you add show up here.</string>
+    <string name="empty_all_action">Add your first item</string>
+    <string name="empty_starred_title">No starred items</string>
+    <string name="empty_starred_body">Star an item to find it fast.</string>
+    <string name="empty_starred_action">Go to all items</string>
+
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_accent">Accent color</string>
+    <string name="settings_dynamic_color">Use wallpaper colors</string>
+    <string name="settings_dynamic_color_body">Colors follow your wallpaper. Needs Android 12 or later.</string>
+    <string name="settings_theme_note">Light and dark follow your system setting.</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_orange">Orange</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_rose">Rose</string>
+    <string name="accent_teal">Teal</string>
+    <string name="accent_description">%1$s accent</string>
+</resources>

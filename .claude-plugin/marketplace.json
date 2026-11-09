@@ -1,0 +1,26 @@
+{
+  "name": "baap",
+  "owner": {
+    "name": "Nilupul Nishan",
+    "url": "https://github.com/NilupulNishan"
+  },
+  "description": "Build any Android app. Agent skills for local-first Android apps with Kotlin and Jetpack Compose.",
+  "plugins": [
+    {
+      "name": "baap",
+      "source": "./",
+      "description": "Build any Android app: skills to research, clone, plan, scaffold, design, integrate, optimize, test, and release local-first Android apps with Kotlin and Jetpack Compose, plus optional enterprise and rugged device skills.",
+      "category": "development",
+      "keywords": [
+        "android",
+        "kotlin",
+        "jetpack-compose",
+        "material-3",
+        "local-first",
+        "enterprise",
+        "rugged",
+        "skills"
+      ]
+    }
+  ]
+}

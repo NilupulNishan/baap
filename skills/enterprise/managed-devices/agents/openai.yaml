@@ -1,0 +1,3 @@
+interface:
+  display_name: "Managed Devices"
+  short_description: "Kiosk, managed configurations, and private apps"

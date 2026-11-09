@@ -1,0 +1,76 @@
+# BAAP
+
+Agent skills for building local-first Android apps with Kotlin and Jetpack
+Compose, plus optional skills for company-managed and rugged devices.
+Installed as a Claude Code and Codex plugin from `.claude-plugin/`, or
+through `npx skills add`. `AGENTS.md` at the root is a copy of this file
+(`.claude/CLAUDE.md`); keep them identical.
+
+BAAP is the Android sibling of BAWA (web apps) and follows its structure.
+
+## Layout
+
+- `skills/<stage>/<name>/SKILL.md`, stages in pipeline order: `start`, `plan`,
+  `code`, `design`, `ship`, then `enterprise` (optional, plugs in at any step).
+- References sit next to `SKILL.md` (`writing.md`, `ai-features.md`) and are
+  linked relatively. Scripts go in `scripts/`, templates in `template/`.
+- `agents/openai.yaml` in every skill: Codex display name and short
+  description. A user-invoked skill also sets
+  `policy.allow_implicit_invocation: false`.
+- `.claude-plugin/plugin.json` lists every shipped skill in `skills`.
+- `skills/start/new-android-app/template/` is a working app. Scripts and
+  tools are Node (`.mjs`), so they run on Windows, macOS, and Linux.
+- `skills/start/new-android-app/template-scanner/` is the optional scanner
+  overlay. The core template has no scanner code.
+- `docs/assets/src/` holds the README banner and plugin icon sources
+  (`icon.svg`, `banner.html`). After an edit, run
+  `node docs/assets/src/render.mjs` and look at the PNGs it writes.
+
+## Writing skills
+
+Follow Matt Pocock's `writing-for-agents` rules:
+
+- The description is a **context pointer**: one short sentence on what it
+  is, then "Use when" and one trigger per branch. Front-load the leading
+  word.
+- Inline what every branch needs. Push what only some branches need into a
+  sibling file behind a link.
+- Every step ends on a checkable condition. Every skill ends with a
+  "Done when" line.
+- Prompt the positive. Use a prohibition only as a hard guardrail, next to
+  the positive target.
+- Cache only what the environment cannot tell the agent: conventions,
+  reasons, gotchas from real apps.
+- One skill calls another with "Call the Skill tool with `<name>`".
+- No em dashes. Plain words, short sentences, active voice.
+- Check every Android API, Gradle setting, library version, and device intent
+  against the official page before you write it. Enterprise skills end with
+  a `## Sources` list.
+
+## Public-safe content
+
+This repo is public. Use public sources only (developer.android.com,
+device makers' public docs, library release pages). Include
+nothing from inside any employer: no internal code, no unreleased product
+names, no notes on how a team works. Use a vendor name only to name its
+product. Never use a vendor logo.
+
+## Changing the template
+
+Prove it still works before you commit:
+
+```bash
+node skills/start/new-android-app/scripts/new-app.mjs try-app <scratch-folder> [--scanner]
+cd <scratch-folder>/try-app && ./gradlew check
+```
+
+`./gradlew check` exits 0, and the snapshots in `shots/` look right in light
+and dark. Run `node scripts/check-skills.mjs` before every commit.
+
+## Adding a skill
+
+1. Create `skills/<stage>/<name>/SKILL.md` and `agents/openai.yaml`.
+2. Add it to `plugin.json` `skills`, the README table, and the router
+   (`skills/start/baap/SKILL.md`).
+3. Run `node scripts/check-skills.mjs` and `claude plugin validate . --strict`.
+4. Keep `version` in `plugin.json` at 1.0.0 until the first release. After that, bump it, so installed copies update.

@@ -1,0 +1,2 @@
+        // Devices with DataWedge: every barcode scan adds an item. Other phones never fire it.
+        __APP_PACKAGE__.scanner.DataWedgeScanner(this).onScan(appScope) { scan -> container.repository.add(scan.data) }

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Label Printing"
+  short_description: "Print labels with ZPL over Bluetooth or the network"

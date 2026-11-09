@@ -1,0 +1,5 @@
+interface:
+  display_name: "Build Any Android App"
+  short_description: "Pick the next step for an Android app"
+policy:
+  allow_implicit_invocation: false
