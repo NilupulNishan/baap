@@ -1,0 +1,3 @@
+interface:
+  display_name: "Layout Grid"
+  short_description: "Grid rules and checks that catch misalignment"

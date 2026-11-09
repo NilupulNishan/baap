@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rugged Scanning"
+  short_description: "DataWedge and EMDK barcode scanning"

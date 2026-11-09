@@ -1,0 +1,17 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+*.log
+captures/
+.cxx/
+
+# Snapshots come from `./gradlew snap`. Look at them, do not commit them.
+shots/
+
+# Release signing: never commit these.
+keystore.properties
+*.jks
+*.keystore

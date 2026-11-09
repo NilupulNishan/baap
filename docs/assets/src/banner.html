@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #F5F7F6;
+    --glow: rgba(16, 185, 129, 0.28);
+    --title: #12161F;
+    --sub: #4A5263;
+    --pill-bg: #FFFFFF;
+    --pill-border: #E3EAE7;
+    --pill-text: #047857;
+  }
+  body.dark {
+    --bg: #0E1316;
+    --glow: rgba(16, 185, 129, 0.30);
+    --title: #F2F7F5;
+    --sub: #A3B1AC;
+    --pill-bg: #172221;
+    --pill-border: #22312F;
+    --pill-text: #6EE7B7;
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 860px; height: 260px; overflow: hidden; position: relative;
+    background:
+      radial-gradient(circle at 132px 130px, var(--glow) 0, transparent 150px),
+      var(--bg);
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  .icon { position: absolute; left: 70px; top: 68px; width: 124px; height: 124px; }
+  .title {
+    position: absolute; left: 228px; top: 57px; margin: 0;
+    font-size: 66px; font-weight: 900; letter-spacing: 1px; color: var(--title); line-height: 1;
+  }
+  .sub {
+    position: absolute; left: 231px; top: 133px; margin: 0;
+    font-size: 25px; font-weight: 400; color: var(--sub); line-height: 1;
+  }
+  .pills { position: absolute; left: 230px; top: 178px; display: flex; gap: 6px; }
+  .pill {
+    height: 26px; padding: 0 11px; border-radius: 13px; box-sizing: border-box;
+    display: flex; align-items: center;
+    background: var(--pill-bg); border: 1px solid var(--pill-border);
+    color: var(--pill-text); font-size: 12.5px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<img class="icon" src="icon.svg" alt="">
+<h1 class="title">BAAP</h1>
+<p class="sub">Build Any Android App</p>
+<div class="pills">
+  <span class="pill">Research</span>
+  <span class="pill">Clone</span>
+  <span class="pill">Plan</span>
+  <span class="pill">Build</span>
+  <span class="pill">Test</span>
+  <span class="pill">Release</span>
+</div>
+<script>if (location.hash === '#dark') document.body.classList.add('dark');</script>
+</body>
+</html>

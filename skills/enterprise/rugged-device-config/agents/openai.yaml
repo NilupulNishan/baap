@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rugged Device Config"
+  short_description: "StageNow, MX, OEMConfig, and EHS for an app"
